@@ -48,6 +48,12 @@ def signin():
 def signup():
     return render_template('signin.html')
 
+
+@app.route('/webgame')
+def webgame():
+    return render_template('webgame.html')
+
+
 ## Database part
 
 #dbName = 'teamSix.db' # Store my local scores
