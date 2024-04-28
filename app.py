@@ -2,7 +2,8 @@ from flask import render_template
 from flask import Flask, request
 import dbAPI
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="./static", 
+    static_url_path="/static", template_folder="./templates")
 
 
 ## You can use the code below for Flask
