@@ -1,7 +1,7 @@
 
 """
-This is the datasbase API for the Team Six Project
-Last Modifeied: 4/20/2024 By: Patrick Sharp
+This is the database API for the Team Six Project
+Last Modified: 4/20/2024 By: Patrick Sharp
 """
 
 
@@ -18,7 +18,7 @@ import re
 @Return 0, Void Function, But returns 0 when working successfully
 This function will connect to the database file given to create Player, Scores, and Games tables if they do not exist already
 Author(s): Patrick Sharp
-Last Mofdified: 3/15/2024
+Last Modified: 3/15/2024
 """
 def create(db_filename: str):
     if type(db_filename) is not str or not db_filename:
@@ -79,7 +79,7 @@ def create(db_filename: str):
 @Return 0, Void Function, But returns 0 when working successfully
 This function will connect to the database file given to add a players score to the Scores table in the DB
 Author(s): Patrick Sharp
-Last Mofdified: 3/29/2024
+Last Modified: 3/29/2024
 """
 def addScore(db_filename: str, playerID: int, playerName:str, score: int):
     
@@ -121,7 +121,7 @@ def addScore(db_filename: str, playerID: int, playerName:str, score: int):
 @Return 0, Void Function, But returns 0 when working successfully
 This function will connect to the database file given to add a player to the Players table in the DB
 Author(s): Patrick Sharp
-Last Mofdified: 3/17/2024
+Last Modified: 3/17/2024
 """
 def addPlayer(db_filename: str, playerName: str, playerEmail: str) -> int:
     
@@ -157,7 +157,7 @@ def addPlayer(db_filename: str, playerName: str, playerEmail: str) -> int:
 @Return a tuple of the top ten scores
 This function will query the Scores table to grab the top ten scores that will be used for the leaderboard
 Author(s): Patrick Sharp
-Last Mofdified: 3/29/2024
+Last Modified: 3/29/2024
 '''
 def getTopTenScores(db_filename: str) -> tuple:
     getTopTen = 'SELECT * FROM Scores ORDER BY score DESC LIMIT 10'
@@ -174,7 +174,7 @@ def getTopTenScores(db_filename: str) -> tuple:
 This function will query the Scores table to grab the top ten scores 
 from a given playerID that will be used for the personal best leaderboard
 Author(s): Patrick Sharp
-Last Mofdified: 4/20/2024
+Last Modified: 4/20/2024
 '''
 def getTopTenPersonalScores(db_filename: str, playerID: int) -> tuple:
     getTopTen = f"SELECT * FROM Scores WHERE playerID = {playerID} ORDER BY score DESC LIMIT 10"

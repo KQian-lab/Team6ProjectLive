@@ -1,7 +1,7 @@
 
 """
-These are the unit tests for the datasbase API used in the Team Six Project 
-Last Modifeied: 4/20/2024 By: Patrick Sharp
+These are the unit tests for the database API used in the Team Six Project 
+Last Modified: 4/20/2024 By: Patrick Sharp
 """
 
 
@@ -123,7 +123,7 @@ class dbAPITestCase(unittest.TestCase):
             with self.assertRaises(ValueError, msg="The database file name given is not a valid option: {}".format(dataType)):
                 dbAPI.addScore(dataType, playerID, playerName, score)
             
-        # Test tocheck that the playerID is a valid data type (int > 0)
+        # Test to check that the playerID is a valid data type (int > 0)
         invalid_playerIDs = [
             None,
             '',
@@ -141,7 +141,7 @@ class dbAPITestCase(unittest.TestCase):
                 dbAPI.addScore(db_filename, dataType, playerName, score)
                 
                 
-        # Test tocheck that the playerName is a valid data type len() == 3
+        # Test to check that the playerName is a valid data type len() == 3
         invalid_playerName_types = [
             None,
             'ABCD',
@@ -174,7 +174,7 @@ class dbAPITestCase(unittest.TestCase):
                 dbAPI.addScore(db_filename, playerID, playerName, dataType)
                 
         
-        # Test the function returns sucsessfully when given a valid db_filename
+        # Test the function returns successfully when given a valid db_filename
         assert (dbAPI.addScore(db_filename, playerID, playerName, score)) == 0, "The addScore() function failed (did not return a value of 0)"
         
         
@@ -250,7 +250,7 @@ class dbAPITestCase(unittest.TestCase):
             with self.assertRaises(ValueError, msg="The player email given is not a valid option: {}".format(dataType)):
                 dbAPI.addPlayer(db_filename,playerName,dataType)
                 
-        # Test the function returns sucsessfully when given a valid db_filename
+        # Test the function returns successfully when given a valid db_filename
         assert (dbAPI.addPlayer(db_filename,playerName, playerEmail)) == 0, "The addPlayer() function failed (did not return a value of 0)"
         
         
@@ -303,7 +303,7 @@ class dbAPITestCase(unittest.TestCase):
         for score in scores:
             dbAPI.addScore(db_filename, playerID, playerName, score)
         
-        # Sort the scores using the python sort function to ease the assert comparrisons
+        # Sort the scores using the python sort function to ease the assert comparisons
         scores.sort()
         
         #Grab the score from the function
