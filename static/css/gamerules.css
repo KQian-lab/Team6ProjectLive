@@ -35,7 +35,7 @@ html {
 /* Text box next to screenshots */
 
   .description {
-    flex-basis: 500px; 
+    flex-basis: 525px; 
     max-width: 100%; 
     max-height: auto;
     align-items: center;
@@ -66,10 +66,10 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-basis: 700px;
+    flex-basis: 650px;
     max-width: 100%;
     max-height: auto;
-    margin: 20px 10px 30px; 
+    margin: 20px 5px 30px; 
 
     /*border-style: solid;
     border-color: navy;*/
@@ -79,6 +79,8 @@ html {
     max-width: 80%;
     max-height: auto;
     margin: 10px 10px 0px; 
+    border-radius: 5px;
+    filter:drop-shadow(0.3rem 0.3rem rgba(0, 0, 0, 0.5));
   }
 
   .caption {
