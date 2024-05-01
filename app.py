@@ -4,6 +4,7 @@ import dbAPI
 
 app = Flask(__name__)
 app.secret_key = 'teamSixKey'
+db_filename = 'teamSix.db'
 
 ## You can use the code below for Flask
 
@@ -99,6 +100,5 @@ def add_score():
 
 
 if __name__ == '__main__':
-    db_filename = 'teamSix.db'
     dbAPI.create(db_filename)
     app.run(debug=True)
