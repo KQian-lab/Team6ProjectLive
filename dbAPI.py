@@ -1,7 +1,7 @@
 
 """
-This is the database API for the Team Six Project
-Last Modified: 4/20/2024 By: Patrick Sharp
+This is the datasbase API for the Team Six Project
+Last Modifeied: 4/20/2024 By: Patrick Sharp
 """
 
 
@@ -18,7 +18,7 @@ import re
 @Return 0, Void Function, But returns 0 when working successfully
 This function will connect to the database file given to create Player, Scores, and Games tables if they do not exist already
 Author(s): Patrick Sharp
-Last Modified: 3/15/2024
+Last Mofdified: 3/15/2024
 """
 def create(db_filename: str):
     if type(db_filename) is not str or not db_filename:
@@ -79,40 +79,65 @@ def create(db_filename: str):
 @Return 0, Void Function, But returns 0 when working successfully
 This function will connect to the database file given to add a players score to the Scores table in the DB
 Author(s): Patrick Sharp
-Last Modified: 3/29/2024
+Last Mofdified: 3/29/2024
 """
-def addScore(db_filename: str, playerID: int, playerName:str, score: int):
+# def addScore(db_filename: str, playerID: int, playerName:str, score: int):
     
-    if type(db_filename) is not str or not db_filename:
-        raise ValueError
-    if type(playerID) is not int or playerID <= 0:
-        raise ValueError
-    if type(playerName) is not str or len(playerName) != 3:
-        raise ValueError
-    if type(score) is not int or score <= 0:
-        raise ValueError
+#     if type(db_filename) is not str or not db_filename:
+#         raise ValueError
+#     if type(playerID) is not int or playerID <= 0:
+#         raise ValueError
+#     if type(playerName) is not str or len(playerName) != 3:
+#         raise ValueError
+#     if type(score) is not int or score <= 0:
+#         raise ValueError
     
-    # Grab the date YYYY-MM-DD format
-    date = str(datetime.now())
-    date = date[0:10] 
+#     # Grab the date YYYY-MM-DD format
+#     date = str(datetime.now())
+#     date = date[0:10] 
     
     
-    conn = sqlite3.connect(db_filename)
-    c = conn.cursor()
-    addScores = f"""
-                    INSERT INTO Scores (playerID, playerName, score, date) VALUES
-                    ({playerID},
-                    '{playerName}',
-                    {score},
-                    '{date}'
-                    );
-                """
-    c.execute(addScores)
-    conn.commit()
-    conn.close()
-    return 0
+#     conn = sqlite3.connect(db_filename)
+#     c = conn.cursor()
+#     addScores = f"""
+#                     INSERT INTO Scores (playerID, playerName, score, date) VALUES
+#                     ({playerID},
+#                     '{playerName}',
+#                     {score},
+#                     '{date}'
+#                     );
+#                 """
+#     c.execute(addScores)
+#     conn.commit()
+#     conn.close()
+#     return 0
 
+"""
+Author: Seiji Aoyama
+Last Modified: 5/1/2024
+"""
+def add_score_to_db(db_filename: str, playerID: int, playerName: str, score: int):
+    try:
+        if type(db_filename) is not str or not db_filename:
+            raise ValueError
+        if type(playerID) is not int or playerID <= 0:
+            raise ValueError
+        if type(playerName) is not str or len(playerName) != 3:
+            raise ValueError
+        if type(score) is not int or score <= 0:
+            raise ValueError
 
+        date = str(datetime.now())
+        date = date[0:10] 
+    
+        with sqlite3.connect(db_filename) as conn:
+            c = conn.cursor()
+            query = "INSERT INTO Scores (playerID, playerName, score, date) VALUES (?, ?, ?, ?);"
+            c.execute(query, (playerID, playerName, score, date))
+            conn.commit()
+        return {"message": "Score successfully added", "status": "success"}
+    except Exception as e:
+        return {"message": str(e), "status": "error"}
 
 """
 @Parm db_filename: Name of the database file to open or create
@@ -121,7 +146,7 @@ def addScore(db_filename: str, playerID: int, playerName:str, score: int):
 @Return 0, Void Function, But returns 0 when working successfully
 This function will connect to the database file given to add a player to the Players table in the DB
 Author(s): Patrick Sharp
-Last Modified: 3/17/2024
+Last Mofdified: 3/17/2024
 """
 def addPlayer(db_filename: str, playerName: str, playerEmail: str) -> int:
     
@@ -148,16 +173,17 @@ def addPlayer(db_filename: str, playerName: str, playerEmail: str) -> int:
                     );
                 """
     c. execute(addPlayer)
+    user_id = c.lastrowid # Obtain user-id
     conn.commit()
     conn.close()
-    return 0
+    return user_id
 
 
 '''
 @Return a tuple of the top ten scores
 This function will query the Scores table to grab the top ten scores that will be used for the leaderboard
 Author(s): Patrick Sharp
-Last Modified: 3/29/2024
+Last Mofdified: 3/29/2024
 '''
 def getTopTenScores(db_filename: str) -> tuple:
     getTopTen = 'SELECT * FROM Scores ORDER BY score DESC LIMIT 10'
@@ -174,7 +200,7 @@ def getTopTenScores(db_filename: str) -> tuple:
 This function will query the Scores table to grab the top ten scores 
 from a given playerID that will be used for the personal best leaderboard
 Author(s): Patrick Sharp
-Last Modified: 4/20/2024
+Last Mofdified: 4/20/2024
 '''
 def getTopTenPersonalScores(db_filename: str, playerID: int) -> tuple:
     getTopTen = f"SELECT * FROM Scores WHERE playerID = {playerID} ORDER BY score DESC LIMIT 10"
@@ -184,3 +210,36 @@ def getTopTenPersonalScores(db_filename: str, playerID: int) -> tuple:
     topTen = c.fetchall()
     conn.close()
     return topTen
+
+
+'''
+Author: Seiji Aoyama
+Last Modified: 4/29/2024
+'''
+def check_user_exists(db_filename: str, username: str, email: str) -> bool:
+    conn = sqlite3.connect(db_filename)
+    c = conn.cursor()
+    query = """
+        SELECT * FROM Players
+        WHERE playerName = ? AND playerEmail = ?
+    """
+    c.execute(query, (username, email))
+    result = c.fetchone()
+    conn.close()
+    return result is not None
+
+'''
+Author: Seiji Aoyama
+Last Modified: 4/29/2024
+'''
+def get_user_details(db_filename: str, username: str, email: str):
+    conn = sqlite3.connect(db_filename)
+    c = conn.cursor()
+    query = """
+        SELECT playerID, playerName, playerEmail FROM Players
+        WHERE playerName = ? AND playerEmail = ?
+    """
+    c.execute(query, (username, email))
+    user_details = c.fetchone()
+    conn.close()
+    return user_details
