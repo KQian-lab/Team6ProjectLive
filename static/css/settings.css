@@ -50,6 +50,25 @@ body, html {
   outline: none;
 }
 
+.btnSign {
+  background-color: #fd6625;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 15px; 
+  margin-bottom: 34px;
+  transition: background-color 0.3s;
+  outline: none;
+  min-width: 20px; 
+  font-weight: bold;
+  font-size: 24px; 
+  cursor: pointer;
+  border-radius: 25px;
+}
 
 .btnStack {
   background-color: #fd6625;
