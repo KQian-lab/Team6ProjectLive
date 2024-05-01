@@ -13,14 +13,23 @@
 </div>
 <div class = ruleContainer>
     <div class = rules>
-        <button>Rule 1</button>
+        <button>
+            <img src="{{ url_for('static', filename='assets/images/player.png') }}" alt="Player">
+            Shoot and defeat the enemies!
+        </button>
     </div>
     <div class = rules>
-        <button>Rule 2</button>
+        <button>
+            <img src="{{ url_for('static', filename='assets/images/invader.png') }}" alt="Invader">
+            Dodge the enemies' attacks!
+        </button>
     </div>
 
     <div class = rules>
-        <button>Rule 3</button>
+        <button>
+            <img src="{{ url_for('static', filename='assets/images/repair.png') }}" alt="Repair">
+            Restore health with items!
+        </button>
     </div>
 
 </div>
