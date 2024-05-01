@@ -4,29 +4,69 @@
     <meta charset="UTF-8">
     <title>Game Explanation</title>
     <link type="image/x-icon" rel="icon" href="{{ url_for('static', filename='assets/images/favicon.png') }}" /> 
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/gamerules.css') }}" />
-    
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/testing.css') }}" />
 </head>
+
 <body>
-<div class = title>
-    <h1>Game Explanation</h1>
-</div>
-<div class = ruleContainer>
-    <div class = rules>
-        <button>Arrow keys to Move! Space to Shoot!</button>
+    <div class = game-rules>
+
+        <div class = "box">
+            <div class = "spacing">
+                <div class="controls">
+                    <p id="controls-header">Welcome To Your Flight Deck</p>
+                    <img src="static/assets/images/keyboard_controls.png" alt="keyboard">
+                    <p>Use the arrow keys to control your ship and the spacebar to blast your enemies out of the sky.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class= "box">
+            
+            <div class="description"> 
+                <h1>Your Objective Is Survival</h1>
+                <p>"SPACE GAME" is an action-packed galactic shooter that tests your reflexes and skills as you pilot your spacecraft through a relentless onslaught of alien invaders. Taking control of your ship's weapons systems, you'll blast across the cosmos, facing off against wave after wave of hostile forces.</p>
+            </div>
+
+            <div class="screenshot">
+                <img src="static/assets/images/screen_meteor6.png" alt="meteor">
+                <div class = "caption">
+                    <p>THIS IS A CAPTION</p>            
+                </div>
+            </div>
+        </div>
+
+        <div class = "box">
+            
+            <div class="description">
+                <h1>The Cosmic Battlefield Is Harsh And Unforgiving</h1>
+                <p>Your skills will be pushed to the limit as you fly through the onslaught of incoming alien fire and dodge meteors - be aware of noxious gas fields that erupt to impair your vision and make it difficult to track the very hazards that mercilessly shred your lives.</p>
+            </div>
+            
+            <div class = "screenshot">
+                <!-- update screen -->
+                <img src="static/assets/images/screen_meteor6.png" alt="meteor">
+                <div class="caption">
+                    <p>Caption</p>
+                </div>
+
+            </div>
+
+        <div class = "box">
+        
+            <div class="description">
+                <h1>You Are Not Alone</h1>
+                <p>Be on the lookout for power-ups that could mean the difference between saving the galaxy and burning debris. Stealth mods will temporarily cloak your ship, making you invisible to the enemy and causing them to hold their fire. Repair packs will arrive like a stellar lifeline to restore your ship's defenses and give you a second chance to turn the tide of the battle. </p>
+            </div>
+            
+            <div class = "screenshot">
+                <!-- update screen -->
+                <img src="static/assets/images/screen_meteor6.png" alt="meteor">
+                <div class="caption">
+                    <p>Caption</p>
+                </div>
+            </div>
+        </div>
+        
     </div>
-    <div class = rules>
-        <button>Shoot Aliens!</button>
-    </div>
-
-    <div class = rules>
-        <button>Avoid Obstacles and collect powerups!</button>
-    </div>
-
-</div>
-<a href="/" class="btnStack">back to the menu</a>
-
-
-
 </body>
 </html>

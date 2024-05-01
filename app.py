@@ -55,6 +55,11 @@ def webgame():
     return render_template('webgame.html')
 
 
+@app.route('/test')
+def test():
+    return render_template('testing.html')
+
+
 ## Database part
 
 #dbName = 'teamSix.db' # Store my local scores
