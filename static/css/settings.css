@@ -29,7 +29,8 @@ body, html {
 }
 
 .rules {
-  margin: 0 30px; 
+  margin: 0 30px;
+  text-align: center;
 }
 
 .rules button {
