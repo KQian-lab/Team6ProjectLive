@@ -1,74 +1,143 @@
-body, html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  justify-content: flex-start; 
-  background-color: #478ead;
-  font-family: Arial, sans-serif;
+html {
+    max-width: 90%;
+    max-height: 90%; 
+    background-color: #478ead;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.title {
-  width: 100%;
-  text-align: center;
-  margin-top: 30px; 
-  font-size: 2em; 
-  color: #ffffff; 
-  font-weight: bold;
-  padding: 20px 0; 
-}
+.game-rules {
+    display: flex;
+    flex-direction: column;
+    max-width: auto;
+    max-height: auto;
+    min-width: 400px;
+    margin-top: 20px; 
+    margin-bottom: 50px;
+    margin-left: auto; 
+    /*border-style: dashed; */
+  }
 
-.ruleContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  width: 100%; 
-  padding: 20px 0; 
-}
+  .box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: center; 
+    max-width: 100%;
+    height: auto; 
+    margin: 10px; 
+    padding: 2%;
+    /*border-style: solid;
+    border-color: black*/
 
-.rules {
-  margin: 0 30px; 
-}
+  }
 
-.rules button {
-  background-color: #fd6625;
-  color: white;
-  text-transform: uppercase;
-  padding: 35px 25px;
-  margin-bottom: 0;
-  font-weight: bold;
-  font-size: 1.8vw;
-  cursor: pointer;
-  border-radius: 25px;
-  min-width: 500px; 
-  min-height: 60vh; 
-  border: none;
-  transition: background-color 0.3s;
-  outline: none;
-}
+/* Text box next to screenshots */
 
-.rules button:hover {
-  background-color: #e67e22;
-}
+  .description {
+    flex-basis: 550px; 
+    max-width: 100%; 
+    max-height: auto;
+    align-items: center;
+    justify-content: center;
+    margin: 20px; 
+    padding: 10px; 
+    /*border-style: solid;
+    border-color: red;*/
+  }
 
-.btnStack {
-  background-color: #fd6625;
-  color: white;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px 15px; 
-  margin-bottom: 34px;
-  transition: background-color 0.3s;
-  outline: none;
-  min-width: 20px; 
-  font-weight: bold;
-  font-size: 14px; 
-  cursor: pointer;
-  border-radius: 25px;
-}
+  .description p {
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+  }
+
+  .description h1 {
+    text-align: center;
+    color: white;
+
+  }
+
+  /* End text box */
+
+/* Box for images */
+  .screenshot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 650px;
+    max-width: 100%;
+    max-height: auto;
+    margin: 20px 5px 30px; 
+
+    /*border-style: solid;
+    border-color: navy;*/
+  }
+
+  .screenshot img {
+    max-width: 80%;
+    max-height: auto;
+    margin: 10px 10px 0px; 
+    border-radius: 5px;
+    filter:drop-shadow(0.3rem 0.3rem rgba(0, 0, 0, 0.5));
+  }
+
+  .caption {
+    margin: 10px 5px 0px;
+    /*border-style: solid;
+    border-color:darkolivegreen */
+
+  }
+
+  /* for image captions */
+  .caption p {
+    max-width: 90%;
+    text-align: center;
+    font-size: 0.95em;
+    color: black; 
+  }
+
+  /* End image box */
+
+  /* Controls */
+
+
+  .controls {
+    display: flex; 
+    flex-direction: column;
+    max-width: 100%; 
+    max-height: auto;
+    margin-top: 20px; 
+    padding-top: 20px;
+
+  }
+
+  .controls img {
+    max-width: 100%;
+    border-radius: 5px; 
+  }
+
+  .controls p {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+  }
+
+  #controls-header {
+    max-width: 100%;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bolder;
+    color: white 
+  }
+
+  .spacing {
+    margin: 20px; 
+    /*border-color: pink; 
+    border-style: solid; */
+  }
+
+
+/* End image box */
