@@ -1,4 +1,3 @@
-**The Webgame Project Hosted Repository**
 # Space Shooter Game
 
 ## Team #6
