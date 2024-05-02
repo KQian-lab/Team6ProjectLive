@@ -10,7 +10,7 @@ html {
     flex-direction: column;
     max-width: auto;
     max-height: auto;
-    min-width: 500px;
+    min-width: 400px;
     margin-top: 20px; 
     margin-bottom: 50px;
     margin-left: auto; 
@@ -35,7 +35,7 @@ html {
 /* Text box next to screenshots */
 
   .description {
-    flex-basis: 525px; 
+    flex-basis: 550px; 
     max-width: 100%; 
     max-height: auto;
     align-items: center;
@@ -92,7 +92,7 @@ html {
 
   /* for image captions */
   .caption p {
-    max-width: 100%;
+    max-width: 90%;
     text-align: center;
     font-size: 0.95em;
     color: black; 
