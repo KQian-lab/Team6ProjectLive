@@ -9,7 +9,7 @@ db_filename = 'teamSix.db'
 ## You can use the code below for Flask
 
 #-- Updated the index route
-@app.route('/')
+@app.route('/index')
 def index():
     return render_template('index.html')
 
@@ -44,6 +44,7 @@ def gamerules():
 def settings():
     return render_template('settings.html')
 
+@app.route('/')
 @app.route('/sign-in', methods=['GET', 'POST'])
 @app.route('/signin', methods=['GET', 'POST'])
 def signin():
@@ -56,7 +57,7 @@ def signin():
                 session['user_id'] = user_details[0]
                 session['username'] = user_details[1]
                 print("Login successful!")
-                return redirect('/')
+                return redirect('/index')
         else:
             print("User not found.")
             return render_template('signin.html')
@@ -76,7 +77,7 @@ def signup():
             session['user_id'] = user_id
             session['username'] = username
             print("Signup successful, user logged in.")
-            return redirect('/')
+            return redirect('/index')
 
     return render_template('signup.html')
 
