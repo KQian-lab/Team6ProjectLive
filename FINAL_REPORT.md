@@ -20,7 +20,31 @@ Team 6's Space game
 
 ### What we completed
 
-##### Tech stack
+#### Selection of Tech stack
+
+##### Design
+- Figma: Figma is a web-based UI design tool that allows for quick creation of rough designs and interactive prototypes. It supports real-time collaboration, making it ideal for remote teams.
+
+##### Frontend
+- Javascript
+- HTML / CSS
+
+##### Backend
+- Python
+- Flask
+- Render
+- SQLite
+
+##### Game
+- Typescript
+- Phaser
+- Vite
+- Rollup.js
+- Neovim
+- GIMP
+- Audacity
+
+
 
 ### What we were in the middle of implementing
 
