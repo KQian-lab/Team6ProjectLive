@@ -1,5 +1,5 @@
 ## Project Title
-
+Team 6's Space game
 
 ## Team members
 - Seiji Aoyama
@@ -14,7 +14,7 @@
 
 
 ## Version control repository link
-
+[Github](https://github.com/KQian-lab/Team6ProjectLive)
 
 ## Include a Final Status Report and reflection
 
