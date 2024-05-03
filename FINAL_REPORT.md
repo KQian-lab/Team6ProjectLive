@@ -16,9 +16,11 @@ Team 6's Space game
 ## Version control repository link
 [Github](https://github.com/KQian-lab/Team6ProjectLive)
 
-## Include a Final Status Report and reflection
+## Final Status Report and reflection
 
 ### What we completed
+
+##### Tech stack
 
 ### What we were in the middle of implementing
 
@@ -27,7 +29,8 @@ Team 6's Space game
 - Increase the difficulty of the game based on the score obtained or the elapsed time. Currently, the difficulty level is constant.
 - Implement sign-out functionality.
 - Maintain sign-in status with cookies.
-- Implement multiple spaceships with different capabilities.
+- Add multiple spaceships, obstacles, and items.
+- Adjust screen scaling to fit browser size
 
 ### Any known problems (bugs, issues)
 - Not immediately game over even if hit by a meteor.
