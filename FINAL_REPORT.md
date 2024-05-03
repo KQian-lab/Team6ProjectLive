@@ -2,7 +2,10 @@
 
 
 ## Team members
-
+- Seiji Aoyama
+- Stephen Donlin
+- Kevin Qian
+- Patrick Sharp
 
 ## Project tracker link
 
@@ -21,3 +24,4 @@
 ### Any known problems (bugs, issues)
 
 ## Public hosting site
+https://team6projectlive.onrender.com/
