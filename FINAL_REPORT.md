@@ -51,8 +51,8 @@ Team 6's Space game
 - Unit Testing: Database
 
 #### 3. Implemented features
+- Sign Up: When a user enters a three-character player name and a properly formatted email address, these are saved to the database, and a player ID is assigned. Upon successful signup, the user is redirected to the index page.
 - Sign In
-- Sign Up
 - My Best Score
 - Leaderboard
 - Game explanation
@@ -78,8 +78,8 @@ Team 6's Space game
 - Redirect to an error page that should not be shown to users, intended for developers only, when an exception is detected in user input during signup
 
 ### Reflection
-- Challenge
-- 
+- "Challenge"
+- ""
 
 ## Public hosting site
 [Team 6's Space game](https://team6projectlive.onrender.com/)
