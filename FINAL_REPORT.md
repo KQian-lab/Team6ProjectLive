@@ -34,6 +34,7 @@ Team 6's Space game
 
 ### Any known problems (bugs, issues)
 - Not immediately game over even if hit by a meteor.
+- Redirect to an error page that should not be shown to users, intended for developers only, when an exception is detected in user input during signup
 
 ## Public hosting site
 [Team 6's Space game](https://team6projectlive.onrender.com/)
