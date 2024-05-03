@@ -77,5 +77,9 @@ Team 6's Space game
 - Not immediately game over even if hit by a meteor.
 - Redirect to an error page that should not be shown to users, intended for developers only, when an exception is detected in user input during signup
 
+### Reflection
+- Challenge
+- 
+
 ## Public hosting site
 [Team 6's Space game](https://team6projectlive.onrender.com/)
