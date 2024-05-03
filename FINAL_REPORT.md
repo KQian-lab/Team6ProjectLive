@@ -31,9 +31,9 @@ Team 6's Space game
 
 ##### Backend
 - Python
-- Flask
+- Flask: Flask is a lightweight Python web framework. It makes it easy to set up routing, which is the process of matching URLs to specific functions in the application.
 - Render
-- SQLite
+- SQLite: SQLite is a lightweight, file-based database that integrates well with Python, offering a user-friendly SQL interface ideal for quick development and small to medium applications.
 
 ##### Game
 - Typescript
