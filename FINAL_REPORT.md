@@ -20,7 +20,7 @@ Team 6's Space game
 
 ### What we completed
 
-#### Selection of Tech stack
+#### 1. Selection of the Technology Stack and Reasons
 
 ##### Design
 - Figma: Figma is a web-based UI design tool that allows for quick creation of rough designs and interactive prototypes. It supports real-time collaboration, making it ideal for remote teams.
@@ -43,6 +43,23 @@ Team 6's Space game
 - Neovim
 - GIMP
 - Audacity
+
+#### 2. Testing
+- Cross-Device Testing​
+- Integration Testing​
+- Functional Testing​: Game​
+- Unit Testing: Database
+
+#### 3. Implemented features
+- Sign In
+- Sign Up
+- My Best Score
+- Leaderboard
+- Game explanation
+- Credits
+- Space game
+
+#### 4. Detail of Space game (Game design)
 
 
 
