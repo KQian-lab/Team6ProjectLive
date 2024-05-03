@@ -19,9 +19,17 @@ Team 6's Space game
 ## Include a Final Status Report and reflection
 
 ### What we completed
+
 ### What we were in the middle of implementing
+
 ### What we had planned for the future
+- Improve User interface.
+- Increase the difficulty of the game based on the score obtained or the elapsed time. Currently, the difficulty level is constant.
+- Implement sign-out functionality
+- Maintain sign-in status with cookies
+
 ### Any known problems (bugs, issues)
+- Not immediately game over even if hit by a meteor.
 
 ## Public hosting site
 [Team 6's Space game](https://team6projectlive.onrender.com/)
