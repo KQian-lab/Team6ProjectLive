@@ -44,6 +44,15 @@ Team 6's Space game
 - GIMP
 - Audacity
 
+##### Project Management
+- Discord
+- Zoom
+- GitHub
+- Monday.com 
+
+[Monday.com](https://monday.com) is a cloud-based collaboration, work-management, and CRM provider used by the team to manage the project. The platform's interface is easy-to-use and provides a dashboard view of each work item, it's owner, and status. There are pre-built templates such as Gantt charts and Kanban boards. A key selling point of the product is it's integration with other platforms including O365, Jira, Basecamp, and Slack. Competitors include Adobe Workfront, Asana, and Smartsheet.
+
+
 #### 2. Testing
 - Cross-Device Testing​
 - Integration Testing​
@@ -83,3 +92,4 @@ Team 6's Space game
 
 ## Public hosting site
 [Team 6's Space game](https://team6projectlive.onrender.com/)
+
