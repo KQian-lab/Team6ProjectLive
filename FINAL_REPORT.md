@@ -30,7 +30,7 @@ Team 6's Space game
 - HTML / CSS
 
 ##### Backend
-- Python
+- Python: Coding language utilized in tthis project for the purpose of creating API routes and working with sqlite
 - Flask: Flask is a lightweight Python web framework. It makes it easy to set up routing, which is the process of matching URLs to specific functions in the application.
 - Render
 - SQLite: SQLite is a lightweight, file-based database that integrates well with Python, offering a user-friendly SQL interface ideal for quick development and small to medium applications.
