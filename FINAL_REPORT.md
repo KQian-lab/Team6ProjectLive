@@ -19,7 +19,22 @@ Team 6's Space game
 ## Final Status Report and reflection
 
 ### What we completed
-
+- Leaderboard Page
+- Game Explanation Page
+- Homepage
+- My Personal Best Page
+- SQL functions for updating leaderboard
+- SQL functions for updating my personal best
+- Signin/Credits Page
+- Sign up functionality
+- Flask App and routes
+- Created functioning game
+  - Score tracking and updating
+  - Obstacles
+  - Enemies
+  - Powerups
+  - Bullets
+  - RNG Entity Spawning
 #### 1. Selection of the Technology Stack and Reasons
 
 ##### Design
