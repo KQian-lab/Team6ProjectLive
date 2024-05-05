@@ -28,6 +28,7 @@ Team 6's Space game
 - Signin/Credits Page
 - Sign up functionality
 - Flask App and routes
+- Successfully hosted Game and static pages
 - Created functioning game
   - Score tracking and updating
   - Obstacles
