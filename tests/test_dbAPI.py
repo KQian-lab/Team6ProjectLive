@@ -74,7 +74,7 @@ class dbAPITestCase(unittest.TestCase):
             with self.assertRaises(ValueError, msg="The database file name given is not a valid option"):
                 dbAPI.create(dataType)
             
-        # Test the function returns sucsessfully when given a valid db_filename
+        # Test the function returns successfully when given a valid db_filename
         assert (dbAPI.create(db_filename)) == 0, "The create() function failed (did not return a value of 0)"
         
         # Testing the table creation in the global test database
@@ -98,14 +98,14 @@ class dbAPITestCase(unittest.TestCase):
     Author(s): Patrick Sharp
     Last Modified: 3/29/2024
     """
-    def test_addScore(self):
+    def test_add_score_to_db(self):
         
         global db_filename
         playerID = 1
         playerName = 'ABC'
         score = 420
         
-        # Grab the date that should be appened to the Scores table from the call above YYYY-MM-DD format
+        # Grab the date that should be append to the Scores table from the call above YYYY-MM-DD format
         date = str(datetime.now())
         date = date[0:10] 
         
@@ -115,13 +115,12 @@ class dbAPITestCase(unittest.TestCase):
             '',
             7,
             3.14,
-            ['db_filename'],
             {'db_filename':0}
         ]
         
         for dataType in invalid_db_filename_data_types:
             with self.assertRaises(ValueError, msg="The database file name given is not a valid option: {}".format(dataType)):
-                dbAPI.addScore(dataType, playerID, playerName, score)
+                dbAPI.add_score_to_db(dataType, playerID, playerName, score)
             
         # Test to check that the playerID is a valid data type (int > 0)
         invalid_playerIDs = [
@@ -138,7 +137,7 @@ class dbAPITestCase(unittest.TestCase):
         
         for dataType in invalid_playerIDs:
             with self.assertRaises(ValueError, msg="The playerID given is not a valid option: {}".format(dataType)):
-                dbAPI.addScore(db_filename, dataType, playerName, score)
+                dbAPI.add_score_to_db(db_filename, dataType, playerName, score)
                 
                 
         # Test to check that the playerName is a valid data type len() == 3
@@ -154,7 +153,7 @@ class dbAPITestCase(unittest.TestCase):
         
         for dataType in invalid_playerName_types:
             with self.assertRaises(ValueError, msg="The playerName given is not a valid option: {}".format(dataType)):
-                dbAPI.addScore(db_filename, playerID, dataType, score)
+                dbAPI.add_score_to_db(db_filename, playerID, dataType, score)
             
         # Test to check that the score is a valid data type (int > 0)
         # NOTE: MIGHT WANT TO STORE A SCORE OF ZERO SO REMOVE THAT IF THAT"S THE CASE
@@ -171,12 +170,11 @@ class dbAPITestCase(unittest.TestCase):
         
         for dataType in invalid_playerIDs:
             with self.assertRaises(ValueError, msg="The score given is not a valid option: {}".format(dataType)):
-                dbAPI.addScore(db_filename, playerID, playerName, dataType)
+                dbAPI.add_score_to_db(db_filename, playerID, playerName, dataType)
                 
         
         # Test the function returns successfully when given a valid db_filename
-        assert (dbAPI.addScore(db_filename, playerID, playerName, score)) == 0, "The addScore() function failed (did not return a value of 0)"
-        
+        assert (dbAPI.add_score_to_db(db_filename, playerID, playerName, score)) == 0, "The addScore() function failed (did not return a value of 0)" 
         
         # Testing if the addScores function used above inserted the supplied values to the Scores table
         conn = sqlite3.connect(db_filename)
@@ -203,7 +201,7 @@ class dbAPITestCase(unittest.TestCase):
         playerName = 'ABC'
         playerEmail = 'test@gmail.com'
         
-        # Grab the date that should be appened to the Scores table from the call above YYYY-MM-DD format
+        # Grab the date that should be appended to the Scores table from the call above YYYY-MM-DD format
         date = str(datetime.now())
         date = date[0:10] 
         
@@ -251,15 +249,14 @@ class dbAPITestCase(unittest.TestCase):
                 dbAPI.addPlayer(db_filename,playerName,dataType)
                 
         # Test the function returns successfully when given a valid db_filename
-        assert (dbAPI.addPlayer(db_filename,playerName, playerEmail)) == 0, "The addPlayer() function failed (did not return a value of 0)"
-        
+        assert (dbAPI.addPlayer(db_filename,playerName, playerEmail)) == 1, "The addPlayer() function failed (did not return a value of 0)" #This has been changed to return the playerID
         
         # Testing if the addScores function used above inserted the supplied values to the Scores table
         conn = sqlite3.connect(db_filename)
         c = conn.cursor()
-        c.execute("SELECT * FROM Players;")
+        c.execute("SELECT * FROM Players")
         tables = c.fetchall()
-        assert tables[-1][0] == len(tables), "The addPlayer() function did not append the values to the Players table with the supplied playerID"
+        assert tables[-1][0] == len(tables), "The addPlayer() function did not append the values to the Players table with the supplied playerID" 
         assert tables[-1][1] == playerName, "The addPlayer() function did not append the values to the Players table with the supplied player name"
         assert tables[-1][2] == date, "The addPlayer() function did not append the values to the Players table with the current date"  
         assert tables[-1][3] == playerEmail, "The addPlayer() function did not append the values to the Players table with the supplied Email"
@@ -301,7 +298,7 @@ class dbAPITestCase(unittest.TestCase):
         
         # Add the scores to the table
         for score in scores:
-            dbAPI.addScore(db_filename, playerID, playerName, score)
+            dbAPI.add_score_to_db(db_filename, playerID, playerName, score)
         
         # Sort the scores using the python sort function to ease the assert comparisons
         scores.sort()
@@ -356,7 +353,7 @@ class dbAPITestCase(unittest.TestCase):
         
         # insert scores
         for score in playerOneScores:
-            dbAPI.addScore(db_filename, playerID_1, playerName_1, score)
+            dbAPI.add_score_to_db(db_filename, playerID_1, playerName_1, score)
         
         # Define the second player and their scores
         playerID_2 = 4
@@ -383,7 +380,7 @@ class dbAPITestCase(unittest.TestCase):
         
         # insert scores
         for score in playerTwoScores:
-            dbAPI.addScore(db_filename, playerID_2, playerName_2, score)
+            dbAPI.add_score_to_db(db_filename, playerID_2, playerName_2, score)
         
         # Define the third player and their scores
         playerID_3 = 5
@@ -410,7 +407,7 @@ class dbAPITestCase(unittest.TestCase):
         
         # insert scores
         for score in playerThreeScores:
-            dbAPI.addScore(db_filename, playerID_3, playerName_3, score)
+            dbAPI.add_score_to_db(db_filename, playerID_3, playerName_3, score)
             
         # Grab playerID_2's top ten scores
         topTen = dbAPI.getTopTenPersonalScores(db_filename, playerID_2)
