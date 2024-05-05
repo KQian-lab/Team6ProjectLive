@@ -101,10 +101,10 @@ Team 6's Space game
 
 ### Reflection
 
-## Hosting
+### Challenges
+
 Initially, the project faced significant hurdles in building and deploying the web game. This challenge was crucial as it threatened the viability of delivering a functional game. The solution came through discovering and utilizing rollup.js, a module bundler for JavaScript that efficiently compiles small pieces of code into something larger and more complex, suitable for production environments. This tool was instrumental in overcoming the deployment issues.
 
-## Scope
 Another significant challenge was managing the project's scope. We wanted to include numerous features and ideas, but practical constraints like time and resources often require a more focused approach. The team addressed this by evaluating the game's core objectives and gameplay mechanics, leading to a strategic decision to cut unnecessary features. This prioritization ensured that development efforts concentrated on enhancing the player's experience with the most impactful elements of the game.
 
 
