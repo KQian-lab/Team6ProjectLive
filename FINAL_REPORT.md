@@ -62,7 +62,7 @@ Team 6's Space game
 
 ##### Project Management
 - GitHub: [GitHub](https://github.com) is platform for developers to store and manage code in Git repositories. 
-- Zoom: [Zoom](https://zoom.com) is a cloud based video conferencing platform. 
+- Zoom: [Zoom](https://zoom.com) is a cloud based video conferencing platform used by the team for weekly meetings.  
 - Discord: [Discord](https://discord.com) is a voice, video, and text communication platform with over 500 million users. Discord users can join or create communities, known as servers. For this project our team created a server for the group to communicate. 
 - Monday.com: [Monday.com](https://monday.com) is a cloud-based collaboration, work-management, and CRM provider used by the team to manage the project. The platform's interface is easy-to-use and provides a dashboard view of each work item, it's owner, and status. There are pre-built templates such as Gantt charts and Kanban boards. A key selling point of the product is it's integration with other platforms including O365, Jira, Basecamp, and Slack. Competitors include Adobe Workfront, Asana, and Smartsheet.
 
