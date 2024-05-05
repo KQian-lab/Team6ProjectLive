@@ -47,9 +47,9 @@ Team 6's Space game
 
 ##### Backend
 - Python: Coding language utilized in tthis project for the purpose of creating API routes and working with sqlite
-- Flask: Flask is a lightweight Python web framework. It makes it easy to set up routing, which is the process of matching URLs to specific functions in the application.
-- Render
-- SQLite: SQLite is a lightweight, file-based database that integrates well with Python, offering a user-friendly SQL interface ideal for quick development and small to medium applications.
+- Flask: Flask is a lightweight Python web framework. It makes it easy to set up routing, which is the process of matching URLs to specific functions in the application. Used to create routes for pages.
+- Render: Used to host static pages and game page
+- SQLite: SQLite is a lightweight, file-based database that integrates well with Python, offering a user-friendly SQL interface ideal for quick development and small to medium applications. Used to update scores and manage leaderboards/personal bests
 
 ##### Game
 - [Typescript](https://www.typescriptlang.org/): We went with Typescript over JavaScript due to its type safety and the ability to find errors before compiling. Although we ran into trouble with building the app, we likely would have encountered similar issues with JavaScript during the application build. Overall A great language to use. Used for the development of our game.
@@ -87,7 +87,6 @@ Team 6's Space game
 
 
 ### What we were in the middle of implementing
-
 ### What we had planned for the future
 - Improve User interface.
 - Increase the difficulty of the game based on the score obtained or the elapsed time. Currently, the difficulty level is constant.
