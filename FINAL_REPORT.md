@@ -76,8 +76,8 @@ Team 6's Space game
 #### 3. Implemented features
 - Sign Up: When a user enters a three-character player name and a properly formatted email address, these are saved to the database, and a player ID is assigned. Upon successful signup, the user is redirected to the index page.
 - Sign In: A user enters a playerName and email here. If that combination already exists in the database, the user successfully signs in and is redirected to the index page. If it does not exist in the database, the user cannot leave the sign-in page.
-- My Best Score
-- Leaderboard
+- My Best Score: Logged-in users can view their top 10 past game scores and the dates on which they were achieved.
+- Leaderboard: Users can view the top 10 past game scores of all users, along with the player names who achieved them.
 - Game explanation
 - Credits
 - Space game
