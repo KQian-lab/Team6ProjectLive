@@ -43,6 +43,8 @@ Repair Pack: Patrick Sharp
 
 Stealth Pack: Patrick Sharp
 
+Meteors: Kevin Qian
+
 Explosion: From the phaser example
 
 
