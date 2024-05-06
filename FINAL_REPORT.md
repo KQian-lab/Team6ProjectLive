@@ -83,10 +83,10 @@ Team 6's Space game
 - Space game: Here is the main part of the game. Below are the details.
 
 #### 4. Detail of Space game (Game design)
-- Shooting at enemies: 
-- Dodging enemy attacks: 
-- Collecting items: 
-- Generating of the next set of enemies: 
+- Shooting at enemies: Users earn 10 points for each enemy they defeat using the space key to control their spaceship.
+- Dodging enemy attacks: Users can use the left and right arrow keys to dodge attacks from enemies and occasionally occurring meteors. Colliding with these will result in the loss of one health point.
+- Collecting items: If the spaceship touches a repair part, it can recover one health point.
+- Generating of the next set of enemies: Once a set of enemy fleets is completely defeated, the same set of enemy fleets will reappear, allowing the game to continue endlessly.
 
 ### What we were in the middle of implementing
 ### What we had planned for the future
