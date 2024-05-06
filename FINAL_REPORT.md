@@ -109,7 +109,7 @@ Initially, the project faced significant hurdles in building and deploying the w
 
 Another significant challenge was managing the project's scope. We wanted to include numerous features and ideas, but practical constraints like time and resources often require a more focused approach. The team addressed this by evaluating the game's core objectives and gameplay mechanics, leading to a strategic decision to cut unnecessary features. This prioritization ensured that development efforts concentrated on enhancing the player's experience with the most impactful elements of the game.
 
-
+Working remotely posed its own set of challenges for the web game project, particularly in terms of collaboration and communication among team members. GitHub allowed everyone to work on different parts of the game simultaneously without overwriting each other’s contributions. This not only streamlined the development process but also enhanced productivity by allowing asynchronous work. Scheduling and synchronizing meeting times also posed a challenge due to the varying availability of team members. The solution came in the form of When2meet, a scheduling tool that helped in finding suitable times for everyone to meet. We quickly decided on a common day and time to meet each week. Using discord for quick communication, we were able to reschedule or change our meetings as necessary.
 
 ## Public hosting site
 [Team 6's Space game](https://team6projectlive.onrender.com/)
