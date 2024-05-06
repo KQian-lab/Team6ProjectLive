@@ -78,9 +78,9 @@ Team 6's Space game
 - Sign In: A user enters a playerName and email here. If that combination already exists in the database, the user successfully signs in and is redirected to the index page. If it does not exist in the database, the user cannot leave the sign-in page.
 - My Best Score: Logged-in users can view their top 10 past game scores and the dates on which they were achieved.
 - Leaderboard: Users can view the top 10 past game scores of all users, along with the player names who achieved them.
-- Game explanation
-- Credits
-- Space game
+- Game explanation: Users can refer to the control guide and rules of the space game. They can learn how to shoot, how to dodge enemy attacks, and the details of special items and special events.
+- Credits: The names of the creators of this game and the project production period are displayed.
+- Space game: Here is the main part of the game. Below are the details.
 
 #### 4. Detail of Space game (Game design)
 
