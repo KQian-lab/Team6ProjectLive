@@ -89,6 +89,8 @@ Team 6's Space game
 - Generating of the next set of enemies: Once a set of enemy fleets is completely defeated, the same set of enemy fleets will reappear, allowing the game to continue endlessly.
 
 ### What we were in the middle of implementing
+- We do not have any ongoing implementations at the moment. Development has paused for now.
+
 ### What we had planned for the future
 - Improve User interface.
 - Increase the difficulty of the game based on the score obtained or the elapsed time. Currently, the difficulty level is constant.
