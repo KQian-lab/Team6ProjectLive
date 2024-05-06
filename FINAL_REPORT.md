@@ -83,8 +83,10 @@ Team 6's Space game
 - Space game: Here is the main part of the game. Below are the details.
 
 #### 4. Detail of Space game (Game design)
-
-
+- Shooting at enemies: 
+- Dodging enemy attacks: 
+- Collecting items: 
+- Generating of the next set of enemies: 
 
 ### What we were in the middle of implementing
 ### What we had planned for the future
