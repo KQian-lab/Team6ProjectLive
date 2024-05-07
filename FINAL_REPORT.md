@@ -12,6 +12,7 @@ Team 6's Space game
 
 ## Link to 5 minute video: a demo for a potential customer
 
+[YouTube Video Link](https://youtu.be/80RhAbMyEc4)
 
 ## Version control repository link
 [Github](https://github.com/KQian-lab/Team6ProjectLive)
